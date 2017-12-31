@@ -40,10 +40,10 @@ print('-'*31)
 print(('PRODUTO'.ljust(16)),('VALOR'))
 print('-'*31)
 for i in lista:
-    print((f'{i[0]:19}').title() + (f'R$: {i[1]:>7}'))
+    print((f'{i[0]:19}').title() + (f'R$: {i[1]:>7.2f}'))
 total = 'TOTAL:'
 print()
-print(f'{total:19}R$: {soma:>7}')    
+print(f'{total:19}R$: {soma:>7.2f}')    
 print('-'*31)
 print('Obrigado por comprar no BARATÂO\nVolte sempre!')
 
@@ -60,12 +60,12 @@ arquivo.write('\n')
 arquivo.write('-'*31)
 arquivo.write('\n')
 for i in lista:
-    arquivo.write((f'{i[0]:19}').title() + (f'R$: {i[1]:>7}')+ '\n')
+    arquivo.write((f'{i[0]:19}').title() + (f'R$: {i[1]:>7.2f}')+ '\n')
 total = 'TOTAL:'
 arquivo.write('\n')
 arquivo.write('\n')
 arquivo.write('\n')
-arquivo.write(f'{total:19}R$: {soma:>7}')    
+arquivo.write(f'{total:19}R$: {soma:>7.2f}')    
 arquivo.write('\n')
 arquivo.write('-'*31)
 arquivo.write('\n')
