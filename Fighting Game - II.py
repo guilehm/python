@@ -14,64 +14,45 @@ class Personagem():
         print(f'PA: {self.p_ataque}')
         print(f'PD: {self.p_defesa}\n')
 
-    def ataque(self,object):
-        self.dano = (self.p_ataque / 4) * uniform(0.8,1.2)
-        defesa = (object.p_defesa) * 0.1
-        self.dano = self.dano - defesa
-        object.vida = (object.vida)- self.dano
-        if object.vida <= 0:
-            object.vida = 0
-            object.vivo = False
-            print(f'{self.nome} derrota {object.nome} com um dano de: {self.dano:.2f}.')
-        else:
-            print(f'{self.nome} ataca {object.nome} e inflige: {self.dano:.2f}.')
+    def hp(self):
+        print('{}'.format(self.nome).upper())
+        print(f'HP: {self.vida:.2f}\n')
 
-##    def luta(self,ataque,object):
-        
+    def ataque(self,object,x=100):
+        cont = 1
+        while self.vivo is True and object.vivo is True and cont <= x:
+            if self.vivo is True and object.vivo is True:
+                self.dano = (self.p_ataque / 4) * uniform(0.8,1.2)
+                defesa = (object.p_defesa) * 0.1
+                self.dano = self.dano - defesa
+                object.vida = (object.vida)- self.dano
+                if object.vida <= 0:
+                    object.vida = 0
+                    object.vivo = False
+                    print(f'{self.nome} derrota {object.nome} com um dano de: {self.dano:.2f}.')
+                else:
+                    print(f'{self.nome} ataca {object.nome} e inflige: {self.dano:.2f}.')
+            if object.vivo is True and self.vivo is True:
+                object.dano = (object.p_ataque / 4) * uniform(0.8,1.2)
+                defesa = (self.p_defesa) * 0.1
+                object.dano = object.dano - defesa
+                self.vida = (self.vida)- object.dano
+                if self.vida <= 0:
+                    self.vida = 0
+                    self.vivo = False
+                    print(f'{object.nome} derrota {self.nome} com um dano de: {object.dano:.2f}.')
+                else:
+                    print(f'{object.nome} ataca {self.nome} e inflige: {object.dano:.2f}.')
+            cont += 1
+        if cont == x+1:
+            print('\nNENHUM VENCEDOR.')
+            self.hp()
+            object.hp()
         
 esqueleto = Personagem('Esqueleto',55,90,45)
 orc = Personagem('Orc',60,70,90)
 troll = Personagem('Troll',75,65,85)
 enderman = Personagem('Enderman',75,75,60)
-zumbi = Personagem('Zumbi',70,70,72)
+zumbi = Personagem('Zumbi',70,70,75)
 
-##while orc.vivo == True and esqueleto.vivo == True:
-##    if esqueleto.vivo == True and orc.vivo == True:
-##        esqueleto.ataque(orc)
-##        
-##    if orc.vivo == True and esqueleto.vivo == True:
-##        orc.ataque(esqueleto)
-
-##while orc.vivo == True and enderman.vivo == True:
-##    if enderman.vivo == True and orc.vivo == True:
-##        enderman.ataque(orc)
-##        
-##    if orc.vivo == True and enderman.vivo == True:
-##        orc.ataque(enderman)        
-
-##while troll.vivo == True and enderman.vivo == True:
-##    if enderman.vivo == True and troll.vivo == True:
-##        enderman.ataque(troll)
-##        
-##    if troll.vivo == True and enderman.vivo == True:
-##        troll.ataque(enderman)
-
-##while esqueleto.vivo == True and enderman.vivo == True:
-##    if enderman.vivo == True and esqueleto.vivo == True:
-##        enderman.ataque(esqueleto)
-##        
-##    if esqueleto.vivo == True and enderman.vivo == True:
-##        esqueleto.ataque(enderman)
-
-while orc.vivo == True and zumbi.vivo == True:
-    if zumbi.vivo == True and orc.vivo == True:
-        zumbi.ataque(orc)
-        
-    if orc.vivo == True and esqueleto.vivo == True:
-        orc.ataque(zumbi)
-    
-orc.carac()
-##esqueleto.carac()
-##troll.carac()
-##enderman.carac()
-zumbi.carac()
+troll.ataque(orc,4)
