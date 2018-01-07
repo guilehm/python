@@ -123,13 +123,3 @@ perso[atc1].hp()
 print()
 perso[atc2].hp()
 linha()
-
-from tkinter import *
-
-janela = Tk()
-janela.title('Título da janela')
-
-lb = Label(janela,text='texto da minha janela')
-lb.place(x=5,y=5)
-
-janela.mainloop()
