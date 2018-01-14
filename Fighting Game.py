@@ -203,7 +203,7 @@ def soco2 (x):
     sleep(2)
     
 def chute2 (x):    
-    ataque = calcula_Chute(x)                           # chamar função de ataque
+    ataque = calcula_Chute(x)                           # chamar funcao de ataque
     dano,p_atb, p_vit = ataque[0],ataque[1],ataque[2]   # atribui retorno da função às variáveis dano e atb(atk, def)
     dano = round((dano/(1+(jogador1['Defesa']/100))+ dano/2),2)   # cálculo de redução de dano por escudo
     jogador1['Vitalidade'] -= dano                      # reduz a vitalidade o valor do dano no defensor
