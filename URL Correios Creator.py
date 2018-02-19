@@ -1,7 +1,9 @@
 import webbrowser
+from urllib.parse import urlencode
+from urllib.request import Request, urlopen
 
 
-def calcula_frete (cep_origem, cep_destino, peso, tipo_frete,
+def calcula_frete (cep_origem='14409652', cep_destino='04110021', peso='1', tipo_frete='04014',
                    altura = '10', largura = '20', comprimento = '20'):
     url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?'
     url += '&nCdEmpresa='
@@ -23,9 +25,12 @@ def calcula_frete (cep_origem, cep_destino, peso, tipo_frete,
 
     return url
 
-cep_origem = '01311200'
-cep_destino = '01102010'
-peso = '0.1'
-tipo_frete = '04014'
+url = calcula_frete()
 
-calculo = calcula_frete(cep_origem, cep_destino, peso, tipo_frete)
+print(url)
+
+request = Request(url)
+result = urlopen(request).read()
+result = str(result)
+
+print(result)
