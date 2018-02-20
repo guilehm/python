@@ -1,6 +1,6 @@
 import webbrowser
-from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+import xml.etree.cElementTree as ET
 
 
 def calcula_frete (cep_origem='14409652', cep_destino='04110021', peso='1', tipo_frete='04014',
@@ -27,10 +27,13 @@ def calcula_frete (cep_origem='14409652', cep_destino='04110021', peso='1', tipo
 
 url = calcula_frete()
 
-print(url)
 
 request = Request(url)
 result = urlopen(request).read()
-result = str(result)
 
-print(result)
+result = result.decode('ISO-8859-1')
+find_valor = ('<Valor>')
+find_prazo = ('<PrazoEntrega>')
+pos_valor = result.index(find_valor) + len(find_valor)
+valor = result[pos_valor : pos_valor + 5]
+print(valor)
