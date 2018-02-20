@@ -33,7 +33,10 @@ result = urlopen(request).read()
 
 result = result.decode('ISO-8859-1')
 find_valor = ('<Valor>')
-find_prazo = ('<PrazoEntrega>')
-pos_valor = result.index(find_valor) + len(find_valor)
-valor = result[pos_valor : pos_valor + 5]
+find_end_valor = ('</Valor>')
+pos_valor = result.index(find_valor)
+pos_end_valor = result.index(find_end_valor)
+print(pos_valor)
+print(pos_end_valor)
+valor = result[pos_valor + len(find_valor): pos_end_valor ]
 print(valor)
