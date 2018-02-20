@@ -36,7 +36,16 @@ find_valor = ('<Valor>')
 find_end_valor = ('</Valor>')
 pos_valor = result.index(find_valor)
 pos_end_valor = result.index(find_end_valor)
+
+find_prazo = ('<PrazoEntrega>')
+find_end_prazo = ('</PrazoEntrega>')
+pos_prazo = result.index(find_prazo)
+pos_end_prazo = result.index(find_end_prazo)
+
 print(pos_valor)
 print(pos_end_valor)
-valor = result[pos_valor + len(find_valor): pos_end_valor ]
+valor = result[pos_valor + len(find_valor): pos_end_valor]
+prazo = result[pos_prazo + len(find_prazo): pos_end_prazo]
+
 print(valor)
+print(prazo)
