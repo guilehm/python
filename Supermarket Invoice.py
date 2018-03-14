@@ -43,6 +43,6 @@ for i in lista:
     print((f'{i[0]:19}').title() + (f'R$: {i[1]:>7}'))
 total = 'TOTAL:'
 print()
-print(f'{total:19}R$: {soma:>7}')    
+print(f'{total:19}R$: {round(soma,2):>7}')
 print('-'*31)
 print('Obrigado por comprar no BARATÂO\nVolte sempre!')
