@@ -27,7 +27,7 @@ lista_esco = sorted(lista_esco)
 
 print()
 print('-'*52)
-print('Os números sorteados foram: {}'.format(lista_sort))        
+print('Os números sorteados foram: {}'.format(lista_sort))
 print('Os números escolhidos foram: {}'.format(lista_esco))
 
 lista_acert = []
@@ -36,7 +36,8 @@ for x in lista_esco:
     if x in lista_sort:
         lista_acert.append(x)
 
-print('Os números acertados foram: {}'.format(lista_acert))    
+if len(lista_acert) >= 1:
+    print('Os números acertados foram: {}'.format(lista_acert))
 print('-'*52)
 
 def acertos (x):

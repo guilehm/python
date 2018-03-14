@@ -3,7 +3,7 @@ from urllib.request import Request, urlopen
 import xml.etree.cElementTree as ET
 
 
-def calcula_frete (cep_origem='14409652', cep_destino='04110021', peso='1', tipo_frete='04014',
+def calcula_frete (cep_origem='01304001', cep_destino='04110021', peso='1', tipo_frete='04014',
                    altura = '10', largura = '20', comprimento = '20'):
     url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?'
     url += '&nCdEmpresa='
@@ -42,10 +42,10 @@ find_end_prazo = ('</PrazoEntrega>')
 pos_prazo = result.index(find_prazo)
 pos_end_prazo = result.index(find_end_prazo)
 
-print(pos_valor)
-print(pos_end_valor)
 valor = result[pos_valor + len(find_valor): pos_end_valor]
 prazo = result[pos_prazo + len(find_prazo): pos_end_prazo]
 
-print(valor)
-print(prazo)
+valor_math = valor.replace(',','.')
+
+print('R$ ' + valor)
+print(prazo + ' dias úteis')
