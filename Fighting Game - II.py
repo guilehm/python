@@ -102,6 +102,7 @@ while valid_nome == False:  # validar nome atacante 1
     else:
         print('\nEscolha um personagem válido. Para mais informações digite "info".')
 valid_nome = False  # validar nome atacante 2
+
 while valid_nome == False:
     atc2 = input('Digite o nome do defensor:\n').lower()
     if atc2 == 'info':
