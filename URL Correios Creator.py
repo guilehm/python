@@ -1,7 +1,4 @@
-import webbrowser
 from urllib.request import Request, urlopen
-import xml.etree.cElementTree as ET
-
 
 def calcula_frete (cep_origem='01304001', cep_destino='04110021', peso='1', tipo_frete='04014',
                    altura = '10', largura = '20', comprimento = '20'):
