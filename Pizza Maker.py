@@ -73,7 +73,7 @@ class Pizza():
             print('TOTAL PEDIDO:'.ljust(24) + ('R$ {:.2f}'.format(adicio + base)))
             print('-'*len(a))
             print('Siga-nos nas redes sociais.')
-            
+
         else:
             print('Agradecemos sua visita!')
             
