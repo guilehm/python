@@ -319,6 +319,7 @@ while repet_atk == True and encerrar ==False:
             
     if jogador1['Vitalidade'] <= 0 or jogador2['Vitalidade'] <= 0:
             encerrar = True
+
     while prox_turn == True and encerrar == False:            
         input('\nAgora é a vez de {} atacar.\nQuando estiver pronto para defender, tecle ENTER.'.format(nome2))
         escolha = randint(1,7)
@@ -359,6 +360,7 @@ if jogador1['Vitalidade'] > jogador2['Vitalidade']:
 else:
     print(nome1,'perdeu e o vencedor foi:')
 print('-'*20)
+
 if jogador1['Vitalidade'] > jogador2['Vitalidade']:
     print(nome1.upper())
 else:
