@@ -9,4 +9,5 @@ while valid_nome == False:
             erros += 1
     if erros == 0:
         valid_nome = True
+
 print('Nome Validado com sucesso')
