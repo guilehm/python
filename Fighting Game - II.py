@@ -49,9 +49,6 @@ class Personagem():
             print('\nNenhum Vencedor.')
 
 
-##            self.hp()
-##            object.hp()
-
 def fim_luta():
     x = ' FIM DE LUTA '
     print(f'\n{x:-^19}')
