@@ -10,24 +10,26 @@ class Personagem:
         self.frase = frase
 
         self.vivo = True
-        self.hit = round((self.p_ataque / 4) * uniform(0.9, 1.0), 2)
-        self.defesa = round(self.p_defesa * 0.08, 2)
-
-        if self.vida <= 0:
-            self.vivo = False
+        self.hit = self.p_ataque / 4
+        self.defesa = self.p_defesa * 0.08
 
     def stats(self):
         print(f'\nNome: {self.nome}')
         print(f'{self.nome} diz: {self.frase}')
         print(f'HP: {self.vida}')
-        # print(f'Arma: {self.arma}')
-        # print(f'Ataque: {self.p_ataque}')
-        # print(f'Defesa: {self.p_defesa}')
+        if self.vivo:
+            print(f'{self} está vivo.')
+        else:
+            print(f'{self} está morto.')
 
     def ataque(self, object):
-        dano = round(self.hit - object.defesa, 2)
+        dano = round((self.hit - object.defesa) * uniform(0.8, 1.2), 2)
         object.vida -= dano
+        if object.vida <= 0:
+            object.vida = 0
+            object.vivo = False
         print(f'{self} recebe um dano de PV {dano} devido ao ataque de {object}')
+
 
     def __str__(self):
         return self.nome
@@ -38,5 +40,7 @@ homem_aranha = Personagem('Homem Aranha', 90, 80, 90, 'Teia' ,'Nada temam, o Ara
 hulk = Personagem('Hulk', 130, 70, 80, 'Força', 'Hulk esmaga!')
 
 batman.ataque(superman)
+batman.ataque(superman)
+
 superman.stats()
 
