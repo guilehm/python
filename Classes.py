@@ -30,11 +30,15 @@ class Personagem:
         return self.nome
 
 batman = Personagem('Batman', 100, 80, 90, 'Boomerangue', 'Eu sou o BATMAN!')
-
 superman = Personagem('Super-Man', 85, 85, 95, 'Raio Laser', 'Ao infinito e além!')
+homem_aranha = Personagem('Homem Aranha', 90, 80, 90, 'Teia' ,'Nada temam, o Aracnídeo chegou!')
+hulk = Personagem('Hulk', 130, 70, 80, 'Força', 'Hulk esmaga!')
 
 batman.ataque(superman)
-superman.ataque(batman)
+superman.ataque(homem_aranha)
+homem_aranha.ataque(hulk)
 
 batman.stats()
 superman.stats()
+homem_aranha.stats()
+hulk.stats()
