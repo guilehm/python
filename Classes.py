@@ -8,9 +8,16 @@ class Personagem:
         self.frase = frase
 
     def stats(self):
-        print(f'Nome: {self.nome}')
+        print(f'\nNome: {self.nome}')
         print(f'{self.nome} diz: {self.frase}')
         print(f'HP: {self.vida}')
-        print(f'Arma: {self.vida}')
-        print(f'Ataque: {self.vida}')
-        print(f'Defesa: {self.vida}')
+        print(f'Arma: {self.arma}')
+        print(f'Ataque: {self.p_ataque}')
+        print(f'Defesa: {self.p_defesa}')
+
+
+batman = Personagem('Batman', 100, 80, 90, 'Boomerangue', 'Eu sou o BATMAN!')
+batman.stats()
+
+superman = Personagem('Super-Man', 120, 85, 95, 'Raio Laser', 'Ao infinito e além!')
+superman.stats()
