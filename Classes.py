@@ -47,8 +47,14 @@ hulk = Personagem('Hulk', 130, 70, 80, 'Força', 'Hulk esmaga!')
 
 lista = ['batman', 'superman', 'aranha', 'hulk']
 personagens = [batman, superman, homem_aranha, hulk]
+
 perso = dict(zip(lista, personagens))
 esco = input('Escolha seu personagem\n\t')
+esco2 = input('Escolha seu adversário\n\t')
+
 lutador = (perso.get(esco.lower()))
+adversario = (perso.get(esco2.lower()))
+
+lutador.ataque(adversario)
 
 
