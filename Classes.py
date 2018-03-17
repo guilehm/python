@@ -29,7 +29,7 @@ class Personagem:
             if object.vida <= 0:
                 object.vida = 0
                 object.vivo = False
-            print(f'{self} ataca e {object} perde {dano} PV.')
+            print(f'{self} ataca com {self.arma} e {object} perde {dano} PV.')
         else:
             if self.vivo:
                 print('{} está morto'.format(object))
@@ -45,10 +45,10 @@ superman = Personagem('Super-Man', 85, 85, 95, 'Raio Laser', 'Ao infinito e alé
 homem_aranha = Personagem('Homem Aranha', 90, 80, 90, 'Teia' ,'Nada temam, o Aracnídeo chegou!')
 hulk = Personagem('Hulk', 130, 70, 80, 'Força', 'Hulk esmaga!')
 
+lista = ['batman', 'superman', 'aranha', 'hulk']
+personagens = [batman, superman, homem_aranha, hulk]
+perso = dict(zip(lista, personagens))
+esco = input('Escolha seu personagem\n\t')
+lutador = (perso.get(esco.lower()))
 
 
-batman.ataque(superman)
-superman.ataque(batman)
-
-batman.stats()
-superman.stats()
