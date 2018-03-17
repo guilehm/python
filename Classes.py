@@ -23,12 +23,18 @@ class Personagem:
             print(f'{self} está morto.')
 
     def ataque(self, object):
-        dano = round((self.hit - object.defesa) * uniform(0.8, 1.2), 2)
-        object.vida -= dano
-        if object.vida <= 0:
-            object.vida = 0
-            object.vivo = False
-        print(f'{self} recebe um dano de PV {dano} devido ao ataque de {object}')
+        if self.vivo and object.vivo:
+            dano = round((self.hit - object.defesa) * uniform(0.7, 1.4), 2)
+            object.vida -= dano
+            if object.vida <= 0:
+                object.vida = 0
+                object.vivo = False
+            print(f'{self} recebe um dano de PV {dano} devido ao ataque de {object}')
+        else:
+            if self.vivo:
+                print('{} está morto'.format(object))
+            else:
+                print('{} está morto'.format(self))
 
 
     def __str__(self):
@@ -39,8 +45,12 @@ superman = Personagem('Super-Man', 85, 85, 95, 'Raio Laser', 'Ao infinito e alé
 homem_aranha = Personagem('Homem Aranha', 90, 80, 90, 'Teia' ,'Nada temam, o Aracnídeo chegou!')
 hulk = Personagem('Hulk', 130, 70, 80, 'Força', 'Hulk esmaga!')
 
-batman.ataque(superman)
-batman.ataque(superman)
 
+
+batman.ataque(superman)
+superman.ataque(batman)
+batman.ataque(superman)
+superman.ataque(batman)
+
+batman.stats()
 superman.stats()
-
