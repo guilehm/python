@@ -16,7 +16,7 @@ class Personagem:
     def stats(self):
         print(f'\nNome: {self.nome}')
         print(f'{self.nome} diz: {self.frase}')
-        print(f'HP: {self.vida}')
+        print(f'HP: {self.vida:.2f}')
         if self.vivo:
             print(f'{self} está vivo.')
         else:
@@ -29,7 +29,7 @@ class Personagem:
             if object.vida <= 0:
                 object.vida = 0
                 object.vivo = False
-            print(f'{self} recebe um dano de PV {dano} devido ao ataque de {object}')
+            print(f'{self} ataca e {object} perde {dano} PV.')
         else:
             if self.vivo:
                 print('{} está morto'.format(object))
@@ -47,8 +47,6 @@ hulk = Personagem('Hulk', 130, 70, 80, 'Força', 'Hulk esmaga!')
 
 
 
-batman.ataque(superman)
-superman.ataque(batman)
 batman.ataque(superman)
 superman.ataque(batman)
 
