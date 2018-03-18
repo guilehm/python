@@ -40,6 +40,15 @@ class Personagem:
     def __str__(self):
         return self.nome
 
+def escolha(atacante):
+    if atacante.lower() in lista:
+        print(perso.get(atacante))
+        return perso.get(atacante)
+    else:
+        print('Escolha um personagem válido.')
+        print('As opções são:\n\t')
+        print(lista)
+
 batman = Personagem('Batman', 100, 80, 90, 'Boomerangue', 'Eu sou o BATMAN!')
 superman = Personagem('Super-Man', 85, 85, 95, 'Raio Laser', 'Ao infinito e além!')
 homem_aranha = Personagem('Homem Aranha', 90, 80, 90, 'Teia' ,'Nada temam, o Aracnídeo chegou!')
@@ -49,12 +58,12 @@ lista = ['batman', 'superman', 'aranha', 'hulk']
 personagens = [batman, superman, homem_aranha, hulk]
 
 perso = dict(zip(lista, personagens))
-esco = input('Escolha seu personagem\n\t')
-esco2 = input('Escolha seu adversário\n\t')
+# esco = input('Escolha seu personagem\n\t')
+# esco2 = input('Escolha seu adversário\n\t')
+#
+# lutador = (perso.get(esco.lower()))
+# adversario = (perso.get(esco2.lower()))
+#
+# lutador.ataque(adversario)
 
-lutador = (perso.get(esco.lower()))
-adversario = (perso.get(esco2.lower()))
-
-lutador.ataque(adversario)
-
-
+esc = escolha(input('Escolha seu personagem:\n'))
