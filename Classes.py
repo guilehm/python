@@ -46,8 +46,9 @@ def escolha(atacante):
         return perso.get(atacante)
     else:
         print('Escolha um personagem válido.')
-        print('As opções são:\n\t')
-        print(lista)
+        print('As opções são:\t')
+        for i in lista:
+            print('-', i.capitalize())
 
 batman = Personagem('Batman', 100, 80, 90, 'Boomerangue', 'Eu sou o BATMAN!')
 superman = Personagem('Super-Man', 85, 85, 95, 'Raio Laser', 'Ao infinito e além!')
