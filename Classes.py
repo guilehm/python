@@ -1,4 +1,5 @@
 from random import uniform
+from random import choice
 
 class Personagem:
     def __init__(self, nome, vida, p_ataque, p_defesa, arma, frase):
@@ -42,13 +43,24 @@ class Personagem:
 
 def escolha(atacante):
     if atacante.lower() in lista:
-        print(perso.get(atacante))
+        print('Você escolheu:', perso.get(atacante))
         return perso.get(atacante)
     else:
         print('Escolha um personagem válido.')
         print('As opções são:\t')
         for i in lista:
             print('-', i.capitalize())
+            # esc = escolha(input('Escolha seu personagem:\n'))
+        global esc
+        esc = escolha(input('Escolha seu personagem:\n'))
+
+def escolha_oponente(atacante):
+    oponente = choice(personagens)
+    while oponente == atacante:
+        oponente = choice(personagens)
+    print('Seu oponente é: {}'.format(oponente))
+    return oponente
+
 
 batman = Personagem('Batman', 100, 80, 90, 'Boomerangue', 'Eu sou o BATMAN!')
 superman = Personagem('Super-Man', 85, 85, 95, 'Raio Laser', 'Ao infinito e além!')
@@ -68,3 +80,4 @@ perso = dict(zip(lista, personagens))
 # lutador.ataque(adversario)
 
 esc = escolha(input('Escolha seu personagem:\n'))
+escolha_oponente(esc)
