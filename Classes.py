@@ -61,17 +61,18 @@ def escolha_oponente(atacante):
     print('Seu oponente é: {}\n'.format(oponente))
     return oponente
 
-
+# Criação de personagens
 batman = Personagem('Batman', 100, 80, 90, 'Boomerangue', 'Eu sou o BATMAN!')
 superman = Personagem('Super-Man', 85, 85, 95, 'Raio Laser', 'Ao infinito e além!')
 homem_aranha = Personagem('Homem Aranha', 90, 80, 90, 'Teia' ,'Nada temam, o Aracnídeo chegou!')
 hulk = Personagem('Hulk', 130, 70, 80, 'um soco', 'Hulk esmaga!')
 
+# Criação do dicionário para chamar objetos
 lista = ['batman', 'superman', 'aranha', 'hulk']
 personagens = [batman, superman, homem_aranha, hulk]
-
 perso = dict(zip(lista, personagens))
 
+# Escolha manual do atacante e aleatória do defensor
 esc = escolha(input('Escolha seu personagem:\n'))
 opo = escolha_oponente(esc)
 
