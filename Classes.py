@@ -58,26 +58,21 @@ def escolha_oponente(atacante):
     oponente = choice(personagens)
     while oponente == atacante:
         oponente = choice(personagens)
-    print('Seu oponente é: {}'.format(oponente))
+    print('Seu oponente é: {}\n'.format(oponente))
     return oponente
 
 
 batman = Personagem('Batman', 100, 80, 90, 'Boomerangue', 'Eu sou o BATMAN!')
 superman = Personagem('Super-Man', 85, 85, 95, 'Raio Laser', 'Ao infinito e além!')
 homem_aranha = Personagem('Homem Aranha', 90, 80, 90, 'Teia' ,'Nada temam, o Aracnídeo chegou!')
-hulk = Personagem('Hulk', 130, 70, 80, 'Força', 'Hulk esmaga!')
+hulk = Personagem('Hulk', 130, 70, 80, 'um soco', 'Hulk esmaga!')
 
 lista = ['batman', 'superman', 'aranha', 'hulk']
 personagens = [batman, superman, homem_aranha, hulk]
 
 perso = dict(zip(lista, personagens))
-# esco = input('Escolha seu personagem\n\t')
-# esco2 = input('Escolha seu adversário\n\t')
-#
-# lutador = (perso.get(esco.lower()))
-# adversario = (perso.get(esco2.lower()))
-#
-# lutador.ataque(adversario)
 
 esc = escolha(input('Escolha seu personagem:\n'))
-escolha_oponente(esc)
+opo = escolha_oponente(esc)
+
+esc.ataque(opo)
