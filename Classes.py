@@ -6,6 +6,7 @@ class Personagem:
     def __init__(self, nome, vida, p_ataque, p_defesa, arma, frase):
         self.nome = nome
         self.vida = vida
+        self.vida_total = vida
         self.p_ataque = p_ataque
         self.p_defesa = p_defesa
         self.arma = arma
@@ -19,7 +20,7 @@ class Personagem:
     def stats(self):
         print(f'\nNome: {self.nome}')
         print(f'{self.nome} diz: {self.frase}')
-        print(f'HP: {self.vida:.2f}')
+        print(f'HP: {self.vida:.2f}', f'- {(self.vida / self.vida_total * 100):.0f}%')
         if self.vivo:
             print(f'{self} está vivo.')
         else:
@@ -83,3 +84,6 @@ bot = escolha_oponente(player)
 player.ataque(bot)
 bot.ataque(player)
 
+# Status
+player.stats()
+bot.stats()
