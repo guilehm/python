@@ -14,6 +14,7 @@ class Personagem:
         self.hit = self.p_ataque / 4
         self.defesa = self.p_defesa * 0.08
 
+    # Para visualizar os atributos do objeto
     def stats(self):
         print(f'\nNome: {self.nome}')
         print(f'{self.nome} diz: {self.frase}')
@@ -23,6 +24,7 @@ class Personagem:
         else:
             print(f'{self} está morto.')
 
+    # Para atacar
     def ataque(self, object):
         if self.vivo and object.vivo:
             dano = round((self.hit - object.defesa) * uniform(0.7, 1.4), 2)
@@ -37,7 +39,7 @@ class Personagem:
             else:
                 print('{} está morto'.format(self))
 
-
+    # Retornar nome quando chamar instância
     def __str__(self):
         return self.nome
 
