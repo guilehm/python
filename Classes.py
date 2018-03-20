@@ -2,6 +2,7 @@ from random import uniform
 from random import choice
 
 class Personagem:
+    # Atributos iniciais do objeto
     def __init__(self, nome, vida, p_ataque, p_defesa, arma, frase):
         self.nome = nome
         self.vida = vida
@@ -75,7 +76,8 @@ personagens = [batman, superman, homem_aranha, hulk]
 perso = dict(zip(lista, personagens))
 
 # Escolha manual do atacante e aleatória do defensor
-esc = escolha(input('Escolha seu personagem:\n'))
-opo = escolha_oponente(esc)
+player = escolha(input('Escolha seu personagem:\n'))
+bot = escolha_oponente(player)
 
-esc.ataque(opo)
+player.ataque(bot)
+bot.ataque(player)
