@@ -34,6 +34,7 @@ class Personagem:
                 object.vida = 0
                 object.vivo = False
             print(f'{self} ataca com {self.arma} e {object} perde {dano} PV.')
+            input()
         else:
             if self.vivo:
                 print('{} está morto'.format(object))
@@ -53,9 +54,8 @@ def escolha(atacante):
         print('As opções são:\t')
         for i in lista:
             print('-', i.capitalize())
-            # esc = escolha(input('Escolha seu personagem:\n'))
-        global esc
-        esc = escolha(input('Escolha seu personagem:\n'))
+        player = escolha(input('Escolha seu personagem:\n'))
+        return player
 
 def escolha_oponente(atacante):
     oponente = choice(personagens)
@@ -79,5 +79,7 @@ perso = dict(zip(lista, personagens))
 player = escolha(input('Escolha seu personagem:\n'))
 bot = escolha_oponente(player)
 
+# Luta
 player.ataque(bot)
 bot.ataque(player)
+
