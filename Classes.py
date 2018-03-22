@@ -46,6 +46,7 @@ class Personagem:
     def __str__(self):
         return self.nome
 
+# escolha do atacante
 def escolha(atacante):
     if atacante.lower() in lista:
         print('Você escolheu:', perso.get(atacante))
@@ -58,6 +59,8 @@ def escolha(atacante):
         player = escolha(input('Escolha seu personagem:\n'))
         return player
 
+
+# escolha aleatória do oponente
 def escolha_oponente(atacante):
     oponente = choice(personagens)
     while oponente == atacante:
