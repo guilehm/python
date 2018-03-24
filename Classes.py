@@ -18,8 +18,8 @@ class Personagem:
 
     # Para visualizar os atributos do objeto
     def stats(self):
-        print(f'\nNome: {self.nome}')
-        print(f'{self.nome} diz: {self.frase}')
+        # print(f'\nNome: {self.nome}')
+        print(f'\n{self.nome} diz: {self.frase}')
         print(f'HP: {self.vida:.2f}', f'- {(self.vida / self.vida_total * 100):.0f}%')
         if self.vivo:
             print(f'{self} está vivo.')
@@ -75,7 +75,7 @@ homem_aranha = Personagem('Homem Aranha', 90, 80, 90, 'Teia' ,'Nada temam, o Ara
 hulk = Personagem('Hulk', 130, 70, 80, 'um soco', 'Hulk esmaga!')
 
 # Criação do dicionário para chamar objetos
-lista = ['batman', 'superman', 'aranha', 'hulk']
+lista = ['batman', 'superman', 'homem aranha', 'hulk']
 personagens = [batman, superman, homem_aranha, hulk]
 perso = dict(zip(lista, personagens))
 
