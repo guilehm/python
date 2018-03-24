@@ -77,7 +77,7 @@ hulk = Personagem('Hulk', 130, 70, 80, 'um soco', 'Hulk esmaga!')
 # Criação do dicionário para chamar objetos
 lista = ['batman', 'superman', 'homem aranha', 'hulk']
 personagens = [batman, superman, homem_aranha, hulk]
-perso = dict(zip(lista, personagens))
+dicionario = dict(zip(lista, personagens))
 
 # Escolha manual do atacante e aleatória do defensor
 player = escolha(input('Escolha seu personagem:\n'))
