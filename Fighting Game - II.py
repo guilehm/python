@@ -70,8 +70,9 @@ troll = Personagem('Troll', 75, 65, 85)
 enderman = Personagem('Enderman', 75, 75, 60)
 zumbi = Personagem('Zumbi', 70, 70, 75)
 
+# dict para chamar variável através de uma string
 perso = {'esqueleto': esqueleto, 'orc': orc, 'troll': troll, 'enderman': enderman,
-         'zumbi': zumbi}  # dict para chamar variável através de uma string
+         'zumbi': zumbi}
 
 print('\n' + '-' * 26)
 print('Bem-vindo ao jogo da luta!')
@@ -93,7 +94,8 @@ while valid_qtd == False:  # validar quantidade de turnos
     except:
         print('\nDigite apenas números inteiros.')
 
-while valid_nome == False:  # validar nome atacante 1
+# validar nome atacante 1
+while valid_nome == False:
     atc1 = input('Digite o nome do atacante:\n').lower()
     if atc1 == 'info':
         print('\nPERSONAGENS:\n\tEsqueleto, Orc, Troll, Enderman, Zumbi\n')
