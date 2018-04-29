@@ -35,7 +35,6 @@ def fatoracao_3(num):
 fatoracao3 = fatoracao_3(num)
 print('F3', fatoracao3)
 
-
 # recursivo
 def fatorial_4(n):
     if n == 0 or n == 1:
