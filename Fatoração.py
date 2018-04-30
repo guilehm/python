@@ -44,3 +44,5 @@ def fatorial_4(n):
 
 fatoracao4 = fatorial_4(num)
 print('F4', fatoracao4)
+
+# fatorial
