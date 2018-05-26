@@ -13,3 +13,15 @@ line.append(5)
 line.append(6)
 
 print(line)
+
+line.appendleft(7)
+
+print(line)
+
+line.pop()
+
+print(line)
+
+line.popleft()
+
+print(line)
