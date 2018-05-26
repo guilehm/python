@@ -19,10 +19,11 @@ p2 = Person('Marcela', 24)
 p3 = Person('Geraldo', 38)
 p4 = Person('Agenor', 44)
 
-persons = [p1, p2, p3, p4]
+persons = [p1, p2, p3, p4] 
 
 print(sorted(persons, key=by_name))
 print(sorted(persons, key=by_age))
+
 print()
 
 print(sorted(persons, key=by_name, reverse=True))
