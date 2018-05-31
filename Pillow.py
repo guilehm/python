@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 import os
 
 
-frederico = Image.open('dog.jpg')
+frederico = Image.open('dog_rotate90.jpg')
 print(frederico)
 print(frederico.height)
 print(frederico.width)
