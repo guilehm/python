@@ -101,3 +101,5 @@ ENV/
 .mypy_cache/
 *.xml
 *.iml
+
+files/\.~lock\.sitka_weather_07-2014\.csv#
