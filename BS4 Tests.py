@@ -7,3 +7,5 @@ r = requests.get('https://www.clark.wa.gov/sheriff/jail-roster')
 soup = BeautifulSoup(r.content, 'html.parser')
 
 print('Title: ', soup.title.get_text())
+
+# soup.prettify()
