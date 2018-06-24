@@ -1,3 +1,4 @@
+import csv
 import requests
 
 from bs4 import BeautifulSoup
@@ -14,3 +15,17 @@ tds = soup.find_all('td')
 
 for i in tds:
     print(i.get_text())
+
+links = soup.find_all('a')
+
+link_list = []
+for link in links:
+    link_list.append(link.get('href'))
+
+for link in links:
+    print(link)
+
+for link in links:
+    names = link.contents[0]
+    print(names)
+
