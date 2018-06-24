@@ -37,3 +37,10 @@ for link in links:
     full_link = link.get('href')
 
     f.writerow([names, full_link])
+
+
+trs = soup.find_all('tr')
+for tr in trs:
+    for link in tr.find_all('a'):
+        fulllink = link.get('href')
+        print(fulllink)
