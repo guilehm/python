@@ -1,5 +1,7 @@
 import csv
 
+from collections import Counter
+
 filename = 'files/oco.csv'
 
 
@@ -11,5 +13,6 @@ codes = []
 for row in reader:
     codes.append(row['codigo_ocorrencia'])
 
-print(len(codes))
+codes_counter = dict(Counter(codes))
+print(codes_counter)
 
