@@ -29,3 +29,11 @@ for link in links:
     names = link.contents[0]
     print(names)
 
+f = csv.writer(open('files/jail-roster.csv', 'w'))
+f.writerow(['Name', 'Link'])
+
+for link in links:
+    names = link.contents[0]
+    full_link = link.get('href')
+
+    f.writerow([names, full_link])
