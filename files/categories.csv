@@ -1,43 +1,621 @@
-Categorias
-Agronegócios
-Alimentos e Bebidas
-Automação
-Bebês e Crianças
-Beleza e Estética
-Brindes
-Brinquedos e Games
-Cama Mesa e Banho
-Carros Motos e Autopeças
-Celulares e Telefones
-Componentes Eletrônicos
-Comunicação e Marketing
-Construção e Reforma
-Corretoras de Seguros
-Eletrodomésticos
-Eletrônicos TV Som e DVD
-Embalagens
-Escolas e Cursos
-Escritórios e Suprimentos
-Esporte e Lazer
-Ferramentas e Máquinas
-Foto Câmera e Filmadora
-Gráficas e Editoras
-Imóveis
-Indústria e Comércio
-Informática
-Internet e Sites
-Joias e Relógios
-Lojas e Variedades
-Materiais de Limpeza
-Moda e Acessórios
-Móveis e Decoração
-Papelarias e Livrarias
-Perfumes e Cosméticos
-Pet Shop
-Restaurantes e Bares
-Saúde e Odontologia
-Serviços Administrativos
-Serviços Diversos
-Transporte e Logística
-Turismo e Hotelaria
-Utensílios Domésticos
+Categorias,Sub Categorias
+Agronegócios,Adubo Orgânico
+Alimentos e Bebidas,Agricultura
+Automação,Agroindústria
+Bebês e Crianças,Agrotóxicos
+Beleza e Estética,Equipamentos Agrícolas
+Brindes,Equipamentos de Irrigação
+Brinquedos e Games,Fazendas
+Cama Mesa e Banho,Fertilizantes
+Carros Motos e Autopeças,Floriculturas
+Celulares e Telefones,Frigoríficos e Abatedouros
+Componentes Eletrônicos,Gado Bovino de Corte
+Comunicação e Marketing,Gado Leiteiro
+Construção e Reforma,Gestão Rural
+Corretoras de Seguros,Insumos Agrícolas
+Eletrodomésticos,Laticínios e Hortifruti
+Eletrônicos TV Som e DVD,Meio Ambiente
+Embalagens,Nutrição Animal
+Escolas e Cursos,Pecuárias Diversas
+Escritórios e Suprimentos,Plantas e Mudas
+Esporte e Lazer,Produtos Orgânicos
+Ferramentas e Máquinas,Sementes
+Foto Câmera e Filmadora,Tecnologia em Agronegócios
+Gráficas e Editoras,Alimentos Industrializados
+Imóveis,Alimentos Naturais
+Indústria e Comércio,Bares e Lanchonetes
+Informática,Bebidas Diversas
+Internet e Sites,Bebidas não Alcoólicas
+Joias e Relógios,Buffet e Eventos
+Lojas e Variedades,Cesta Básica
+Materiais de Limpeza,Cesta de Natal
+Moda e Acessórios,Comércio de Alimentos
+Móveis e Decoração,Doces e Chocolates
+Papelarias e Livrarias,Outras Bebidas
+Perfumes e Cosméticos,Outros Alimentos
+Pet Shop,Pizzarias
+Restaurantes e Bares,Receitas de Alimentos
+Saúde e Odontologia,Restaurantes
+Serviços Administrativos,Suplemento Alimentar
+Serviços Diversos,Vinhos
+Transporte e Logística,Vitaminas
+Turismo e Hotelaria,Automação Comercial
+Utensílios Domésticos,Automação Industrial
+,Automação Residencial
+,Balanças Comerciais
+,Bobina de Papel pdv
+,Caixa Registradora
+,Energia Solar
+,Equipamentos para Automação
+,Impressora de Cartão
+,Impressora Fiscal
+,Instrumento de Medição
+,Leitor de Código de Barras
+,Plastificador
+,Ponto Eletrônico
+,Segurança Eletrônica
+,Sistema de Estoque
+,Artigos para Festa Infantil
+,Babá Eletrônica
+,Berço e Cercado
+,Calçados Infantil
+,Carrinho de Bebê
+,Enxoval para Bebê
+,Fraldas Descartáveis
+,Kit Acessórios para Bebês
+,Kit para Quarto de Bebês
+,Outros Produtos Infantil
+,Roupas de Bebês
+,Trocador para Bebê
+,Academia
+,Acessórios para Cabelo
+,Aparelhos de Estética
+,Cirurgia Plástica
+,Clínica Estética
+,Emagrecimento
+,Escova Progressiva
+,Higiene Pessoal
+,Kit de Maquiagem
+,Kit Depilação
+,Kit Unhas e Manicure
+,Lentes de Contato
+,Maleta de Maquiagem
+,Perucas e Apliques
+,Produtos de Beleza
+,Salão de Beleza
+,Tratamento de Pele
+,Tratamento para Cabelos
+,Brinde Executivo
+,Brindes e Presentes
+,Brindes Ecológicos
+,Brindes Personalizados
+,Brindes Promocionais
+,Calendários
+,Canecas e Squeezes
+,Canetas e Lapiseiras
+,Chaveiros Personalizados
+,Chinelos Personalizados
+,Convites e Lembrancinhas
+,Fitas Personalizadas
+,Pelúcias Personalizadas
+,Pen Drive Personalizado
+,Placas para Homenagens
+,Porta Cartões e Carteiras
+,Sacolas Ecológicas
+,Troféu e Medalha
+,Acessórios para Brinquedos
+,Bichinhos de Pelúcia
+,Blocos de Montar
+,Bonecas e Bonecos
+,Brinquedos Educativos
+,Brinquedos Eletrônicos
+,Brinquedos Infláveis
+,Carrinhos de Brinquedo
+,Games
+,Jogos de Vídeo Game
+,Miniaturas e Colecionáveis
+,Outros Brinquedos
+,Artigos para Banho
+,Artigos para Mesa
+,Cama Box
+,Cobertor e Manta
+,Colchão de Casal
+,Colchão de Solteiro
+,Edredom de Casal
+,Edredom de Solteiro
+,Jogo de Banho
+,Jogo de Cama
+,Lençol de Casal
+,Lençol de Solteiro
+,Outros Artigos de Cama
+,Quarto Infantil
+,Tapete de Banheiro
+,Toalhas de Banho
+,Toalhas de Mesa
+,Travesseiros
+,Automóveis e Utilitários
+,Autopeça Acessório
+,Caminhões
+,Consórcio de Veículos
+,Despachantes Detran
+,Locadora de Veículos
+,Moto e Motocicleta
+,Oficina e Funilaria
+,Seguro para Veículos
+,Tratores e Máquinas
+,Apps Para Celular
+,Capas para Celulares
+,Celular e Smartphone
+,Chip Pós-Pago
+,Chip Pré-Pago
+,Fones de Ouvido
+,iPhone
+,PABX e Central Telefônica
+,Peças Para Celular
+,Peças Para Telefones
+,Telefones Acessórios
+,Telefones com Fio
+,Telefones Retrô
+,Telefones sem Fio
+,Telefonia Voip
+,Walkie Talkie
+,Cabos Eletronicos
+,Capacitores e Resistores
+,Componente Eletrônico
+,Isolante Térmico
+,Peças Eletrônicas
+,Sistema de Alarme
+,Agência de Publicidade
+,Comunicação Visual
+,Designer Gráfico
+,Feira e Eventos
+,Imprensa e Mídia
+,Marketing Digital
+,Produção Cenográfica
+,Propaganda
+,Acústico e Carpete
+,Arames Galvanizados
+,Arquitetos
+,Construções Reformas
+,Divisória e Forro
+,Engenharia Civil
+,Ferro para Construção
+,Fios e Cabos Elétricos
+,Instalação Elétrica
+,Jardinagem e Paisagismo
+,Mármore e Granito
+,Materiais de Construção
+,Materiais Elétricos
+,Piso e Revestimento
+,Portas e Janelas
+,Rodapé
+,Telhados de Coberturas
+,Tinta e Solvente
+,Toldos e Portões
+,Tomadas e Interruptores
+,Tubos e Conexões
+,Vidros e Esquadrias
+,Consórcio Imóveis
+,Consórcio Veículos
+,Outros Seguros
+,Seguro de Aluguel
+,Seguro de Veículos
+,Seguro de Viagem
+,Seguro de Vida e Familia
+,Seguro Residencial
+,Seguro Saúde
+,Aquecedor de Ar
+,Ar Condicionado
+,Aspirador de Pó
+,Cafeteira
+,Centrífuga de Alimentos
+,Centrífuga de Roupas
+,Coifa e Depurador de Ar
+,Consertos de Eletrodoméstico
+,Ferro de Passar Roupas
+,Fogão e Cooktop
+,Liquidificador
+,Máquina de Lavar Roupas
+,Microondas e Fornos
+,Outros Eletrodomésticos
+,Peças de Eletrodomésticos
+,Purificador de Água
+,Refrigerador e Freezer
+,Ventilador e Circulador de Ar
+,Antena de TV
+,Áudio e Vídeo
+,Blu-Ray e DVD Player
+,Cabos para Áudio e Video
+,Caixa Acústica
+,Calculadoras
+,DVD Player Automotivo
+,Headset
+,Home Theater
+,Micro e Mini System
+,MP3 Player
+,Navegador GPS
+,Outros Eletrônicos
+,Receptor Digital para TV
+,Suporte para TV
+,Televisores
+,Acessórios de Embalagens
+,Bombonas e Tambores
+,Caixas de Papelão
+,Cordas e Barbantes
+,Embalagem Descartável
+,Embalagem Flexível
+,Embalagem para Presente
+,Embalagem Plástica
+,Embalagens de Madeira
+,Embalagens Diversas
+,Embalagens para Alimentos
+,Fitas Adesivas
+,Fitas para Arquear
+,Frascos de Vidro
+,Lonas e Encerados
+,Máquina Embaladora
+,Outras Embalagens
+,Papelão Ondulado
+,Plástico Bolha
+,Sacolas de Papel
+,Sacolas Plásticas
+,Sacos de Ráfia
+,Apostilas e Livros do ENEM
+,Apostilas para Concursos
+,Cursinho ENEM
+,Curso de Culinária
+,Curso de Espanhol
+,Curso de Informática
+,Curso de Inglês
+,Curso para Concursos Públicos
+,Curso para Vestibular
+,Cursos a Distância
+,Cursos de Idiomas
+,Cursos Online
+,Cursos Profissionalizantes
+,Cursos Técnicos
+,Ensino Médio e Supletivo
+,Faculdade
+,Mestrado e Doutorado
+,Reforço Escolar
+,Agendas e Calendários
+,Armários e Gaveteiros
+,Arquivos para Escritórios
+,Bobinas Térmicas e Pdv
+,Cadeiras e Longarinas
+,Calculadora de Mesa
+,Cestos de Lixo
+,Crachás e Acessórios
+,Estantes de Livros
+,Formulários e Impressos
+,Fragmentadoras de Papel
+,malotes e lacres
+,Materiais de Escritórios
+,Mesa e Escrivaninha
+,Móveis para Escritórios
+,Papelarias e Suprimentos
+,Suportes e Organizadores
+,Suprimentos de Impressoras
+,Aparelhos de Ginástica
+,Artigos Náuticos
+,Artigos para Academia
+,Bicicletas
+,Bola de Futebol
+,Camisa de Futebol
+,Escolinha de Futebol
+,Fitness
+,Musculação e Ginástica
+,Outros Artigos Esportivos
+,Caixas de Ferramentas
+,Carregador de Baterias
+,Chaves e Alicates
+,Compressor de Ar
+,Ferramentas Automotivas
+,Ferramentas Diversas
+,Ferramentas Dremel
+,Ferramentas para Jardim
+,Ferramentas Pneumáticas
+,Geradores de Energia
+,Hidráulica
+,Instrumentos de Medição
+,Manutenção de Máquinas
+,Máquina de Costura
+,Maquinas de Embalar
+,Máquinas de Solda
+,Máquinas e Equipamentos
+,Máquinas Industriais
+,Máquinas para Madeira
+,Movimentação de Cargas
+,Outras Máquinas
+,Parafusos e Fixadores
+,Peças para Máquinas
+,Rolamentos e Motores
+,Talhas e Guinchos
+,Usinagem e Corte
+,Acessórios para Câmeras
+,Acessórios para Filmadoras
+,Bolsa e Estojo para Cameras
+,Câmera Digital
+,Filmadora
+,Fotos e Filmagem
+,Porta Retratos Digital
+,Revelação Fotos
+,Banner e Adesivos
+,Comunicação Visual
+,Copiadora e Encadernadora
+,Crachás
+,Editora
+,Etiquetas e Rótulos
+,Fotolito Arte e Design
+,Gráfica Off Set
+,Gráfica Silk Screen
+,Impressora de PVC
+,Máquinas Gráficas
+,Sinalização
+,Aluguel para Temporada
+,Apartamento à Venda
+,Apartamento para Alugar
+,Casa à Venda
+,Casa Para Alugar
+,Corretor de Imóveis
+,Financiamento de Imóveis
+,Imobiliárias
+,Outros Imóveis
+,Sala Comercial
+,Sítio e Chácara
+,Terreno à Venda
+,Aço Inox
+,Alumínio e Esquadrias
+,Balança Eletrônica
+,Bombas e Compressores
+,Borrachas e Artefatos
+,Componentes Eletrônicos
+,Couro e Artefatos de Couro
+,Distribuidores e Atacadistas
+,Equipamentos Hidráulicos
+,Equipamentos para Empresas
+,Equipamentos para Indústria
+,Fábrica de Alimentos
+,Ferragens e Metais
+,Madeira e Laminados
+,Marcenarias e Moveis
+,Matéria-Prima
+,Metalúrgicas
+,Minerais e Minérios
+,Outros Equipamentos
+,Parafusos e Porcas
+,Passa o Ponto
+,Petróleo e Gás
+,Plásticos e Derivados
+,Pneumática
+,Produtos Quimicos
+,Tecidos e Confecções
+,Tubos e Conexões
+,Uniformes Profissionais
+,Válvulas e Conexões
+,Vidraçarias
+,Cartucho para Impressora
+,Computador Desktop
+,Hardware e Periféricos
+,Impressora Jato de Tinta
+,Impressora Laser
+,Modem DSL
+,Monitores LCD e LED
+,Mouse
+,Notebook e Ultrabook
+,Redes e Equipamentos
+,Roteadores
+,Serviços de Informática
+,Softwares e Aplicativos
+,Tablet
+,Toner Para Impressoras
+,Business Cloud Server
+,Cloud Virtual Machines
+,Desenvolvimento de Sites
+,E-mail Marketing
+,Hospedagem de Sites
+,Servidor Cloud
+,Servidor Dedicado
+,Sistemas Web
+,SSD VPS Hosting
+,Trabalhos na Internet
+,Virtual Cloud Servers
+,Web Designer
+,Alianças e Anéis
+,Anéis de Ouro
+,Anéis de Prata
+,Brincos
+,Colares e Correntes
+,Joias e Bijuterias
+,Medalhas
+,Outras Joias
+,Pedras Preciosas
+,Pingentes
+,Porta Joias
+,Porta Relógios
+,Pulseira e Bracelete
+,Relógios de Parede
+,Relógios de Pulso
+,Relógios Femininos
+,Relógios Masculinos
+,Tornozeleiras
+,Arte e Antiguidades
+,Artigos para Festas
+,Artigos Religiosos
+,CDs e DVDs
+,Colecionáveis
+,Enfeites de Natal
+,Instrumentos Musicais
+,Livros Evangélicos
+,Outras Lojas
+,Som e Acessórios
+,Água Sanitária
+,Ceras e Removedores
+,Desinfetantes
+,Esponja e Lã de Aço
+,Limpador Multiuso
+,Papel Higiênico e Interfolhas
+,Sacos de Lixo
+,Vassouras e Rodos
+,Acessórios de Moda
+,Bolsas e Sacolas
+,Calçado Feminino
+,Calçado Masculino
+,Carteiras e Clutches
+,Casacos e Jaquetas
+,Chapéus e Bonés
+,Lingeries
+,Mochilas e Malas
+,Moda Praia
+,Óculos de Sol
+,Roupa Feminina
+,Roupa Masculina
+,Roupas Infantil
+,Armários e Guarda-Roupa
+,Cortinas e Persianas
+,Cozinha Modulada
+,Espreguiçadeiras
+,Estantes e Livreiros
+,Lustres e Luminárias
+,Móveis para Banheiro
+,Móveis para Dormitórios
+,Móveis para Escola
+,Móveis para Escritório
+,Móveis para Jardim
+,Móveis para Sala
+,Móveis para Varanda
+,Objetos Decorativos
+,Outros Móveis
+,Plantas Artificiais
+,Sofás e Poltronas
+,Tapetes
+,Vasos e Cachepots
+,Agendas e Calendários
+,Blocos Auto-Adesivos
+,Blocos de Papel
+,Cadernos e Fichários
+,Caixas Organizadoras
+,Canetas
+,Cartões Comemorativos
+,Cartuchos e Toners
+,Colas e Fitas Adesivas
+,Envelopes
+,Estojos e Necessaires
+,Etiquetas Adesivas
+,Formulários
+,Kit Escolar
+,Lápis e Lapiseiras
+,Livros Diversos
+,Livros Escolares
+,Marcadores de Texto
+,Mídias de CD e DVD
+,Outros Artigos de Papelarias
+,Papéis Diversos
+,Papel Sulfite
+,Pastas e Arquivos
+,Quadros e Lousas
+,Cosmético Orgânico
+,Desodorantes
+,Espuma para Barbear
+,Gel e Espuma para Barbear
+,Hidratante e Loção Corporal
+,Hidratante e Loção Facial
+,Perfume Feminino
+,Perfumes Contratipo
+,Perfumes Importados
+,Perfumes Masculino
+,Produtos de Higiene Pessoal
+,Produtos de Maquiagem
+,Produtos para Depilação
+,Shampoo e Condicionador
+,Animais e Filhotes
+,Arranhadores e Brinquedos
+,Artigos para Animais
+,Banho e Tosa
+,Bebedouro e Comedouro
+,Cama para Cães
+,Cama para Gatos
+,Casinha para Cães
+,Lojas Pet Shop
+,Medicamentos Veterinários
+,ONG de Animais
+,Ossinhos e Petiscos
+,Ração e Suplementos
+,Ração para Aves
+,Ração para Cães
+,Ração para Gatos
+,Ração Para Peixes
+,Shampoo para Cães
+,Shampoo para Gatos
+,Veterinários
+,Bares e Choperias
+,Churrascarias
+,Drinks e Coquetéis
+,Food Truck
+,Lanchonete e Pastelaria
+,Padaria e Confeitaria
+,Pizzarias
+,Restaurantes
+,Clinica Médica
+,Clinica Odontológica
+,Equipamentos Médicos
+,Equipamentos Odontológicos
+,Ervas e Chás Naturais
+,Farmácias
+,Laboratório Clínico
+,Planos de Saude
+,Produtos de Higiene Bucal
+,Produtos Hospitalares
+,Assessoria Empresarial
+,Assessoria Jurídica
+,Consultorias
+,Contabilidade
+,Despachantes
+,Engenharia e Projetos
+,Recursos Humanos
+,Segurança do Trabalho
+,Segurança Patrimonial
+,Aluguel de Equipamentos
+,Assistência Técnica
+,Aulas Particulares
+,Construção Civil
+,Dedetizadora e Desentupidora
+,Estampa em Tecidos
+,Eventos e Shows
+,Fotógrafos Profissionais
+,Instalações Elétricas
+,Jardinagem e Paisagismo
+,Limpeza e Conservação
+,Outros Serviços
+,Reforma em Estofados
+,Reformas e Pinturas
+,Serviços de Manutenção
+,Serviços Técnicos
+,Terapias e Massagistas
+,Terceirização de Mão-de-Obra
+,Usinagem de Peças
+,Guincho e Guindaste
+,Logística e Distribuição
+,Logística Equipamentos
+,Mudança e Carreto
+,Transporte Aéreo
+,Transporte Executivo
+,Transporte Expresso
+,Transporte Marítimo
+,Transporte Rodoviário
+,Agência de Viagens
+,Hotéis
+,Hotel Fazenda
+,Passagens Aéreas
+,Pousadas
+,Viagens Internacionais
+,Aparelho de Jantar
+,Cafeteiras
+,Churrasqueiras
+,Conjuntos de Utensílios
+,Cooler para Bebidas
+,Garrafa Térmica
+,Kit para Churrasco
+,Outros Utensílios Domésticos
+,Panelas
+,Suporte para Utensílios
