@@ -11,11 +11,8 @@ print('Title: ', soup.title.get_text())
 h2s = soup.find_all('h2')
 sbtcats = soup.find_all('a', {'class': 'sbtcat'})
 
-categories = [{'Categorias': h2.text} for h2 in h2s]
-sub_categories = [{'Sub Categorias': sbtcat.text} for sbtcat in sbtcats]
-
 categories = [h2.text for h2 in h2s]
-sub_categories = [sbtcat.text for sbtcat in sbtcats]
+sub_categories = [subcat.text for subcat in sbtcats]
 
 rows = zip_longest(*([categories, sub_categories]), fillvalue='')
 
