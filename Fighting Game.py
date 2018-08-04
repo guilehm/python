@@ -1,4 +1,4 @@
-from random import choice,randint,uniform
+from random import choice, randint, uniform
 from time import sleep
 
 print('-'*26)

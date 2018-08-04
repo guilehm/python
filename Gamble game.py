@@ -54,5 +54,3 @@ def acertos (x):
 acertados = acertos(len(lista_acert))
 print()
 print(acertados)
-    
-    
