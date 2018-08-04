@@ -1,6 +1,6 @@
-from PIL import Image, ImageDraw, ImageFont
 import os
 
+from PIL import Image, ImageDraw, ImageFont
 
 frederico = Image.open('dog_rotate90.jpg')
 print(frederico)

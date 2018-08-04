@@ -81,16 +81,3 @@ class Pizza():
 user1 = Pizza()
 user1.ingredientes()
 user1.pedido()
-
-
-
-
-
-
-
-
-
-
-
-
-
