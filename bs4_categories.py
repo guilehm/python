@@ -1,8 +1,8 @@
-import requests
 import csv
-
-from bs4 import BeautifulSoup
 from itertools import zip_longest
+
+import requests
+from bs4 import BeautifulSoup
 
 r = requests.get('https://www.guiadecompra.com/categorias/')
 soup = BeautifulSoup(r.content, 'html.parser')

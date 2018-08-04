@@ -1,6 +1,6 @@
 import csv
-import requests
 
+import requests
 from bs4 import BeautifulSoup
 
 r = requests.get('https://www.clark.wa.gov/sheriff/jail-roster')
