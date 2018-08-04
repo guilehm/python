@@ -1,5 +1,6 @@
 from random import choice
 
+
 class Jogador:
 
     def __init__(self, nome):

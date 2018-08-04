@@ -1,4 +1,5 @@
 import requests
+
 from lxml import etree
 
 URL = 'http://www.buscacep.correios.com.br/sistemas/buscacep/resultadoBuscaCepEndereco.cfm'

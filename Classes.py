@@ -1,5 +1,5 @@
-from random import uniform
-from random import choice
+from random import choice, uniform
+
 
 class Personagem:
     # Atributos iniciais do objeto
