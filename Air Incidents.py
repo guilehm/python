@@ -1,6 +1,5 @@
 import csv
 import operator
-
 from collections import Counter
 
 filename = 'files/oco.csv'
