@@ -1,6 +1,6 @@
 import csv
 
-filename = 'files/sitka_weather_07-2014.csv'
+filename = "files/sitka_weather_07-2014.csv"
 
 with open(filename) as f:
     reader = csv.reader(f)
@@ -14,7 +14,11 @@ with open(filename) as f:
         min_temp.append(row[3])
         try:
             max_wind_speed.append(int(row[16]))
-            print('{number:3} adicionado à lista.'.format(number=int(row[16])))
+            print("{number:3} adicionado à lista.".format(number=int(row[16])))
         except ValueError:
-            print('Valor inválido para linha {num}. Foi adicionado "{row}" à lista.'.format(num=num, row=row[16]))
+            print(
+                'Valor inválido para linha {num}. Foi adicionado "{row}" à lista.'.format(
+                    num=num, row=row[16]
+                )
+            )
             max_wind_speed.append(row[16])

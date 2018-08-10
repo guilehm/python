@@ -2,7 +2,7 @@ import csv
 import operator
 from collections import Counter
 
-filename = 'files/oco.csv'
+filename = "files/oco.csv"
 
 
 reader = csv.DictReader(open(filename))
@@ -14,8 +14,8 @@ codes = []
 ocurrencies_type = []
 
 for row in reader:
-    codes.append(row['codigo_ocorrencia'])
-    ocurrencies_type.append(row['ocorrencia_tipo'])
+    codes.append(row["codigo_ocorrencia"])
+    ocurrencies_type.append(row["ocorrencia_tipo"])
 
 codes_counter = dict(Counter(codes))
 ocurrencies_type_counter = dict(Counter(ocurrencies_type))

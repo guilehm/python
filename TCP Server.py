@@ -10,7 +10,11 @@ server.bind((bind_ip, bind_port))
 
 server.listen(5)
 
-print("[*] Listening on {bind_ip} {bind_port}".format(bind_ip=bind_ip, bind_port=bind_port))
+print(
+    "[*] Listening on {bind_ip} {bind_port}".format(
+        bind_ip=bind_ip, bind_port=bind_port
+    )
+)
 
 
 # this is the client-handling thread
@@ -28,7 +32,7 @@ def handle_client(client_socket):
     while True:
         client, addr = server.accept()
 
-        print("[*] Accepted connection from: {}:{}". format(addr[0], addr[1]))
+        print("[*] Accepted connection from: {}:{}".format(addr[0], addr[1]))
 
         # spin up out client thread to handle incoming data
 

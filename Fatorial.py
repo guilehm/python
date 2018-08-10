@@ -10,8 +10,8 @@ def fatoracao(num):
         return result
 
 
-num = int(input('Insira um número: '))
-print('F1', fatoracao(num))
+num = int(input("Insira um número: "))
+print("F1", fatoracao(num))
 
 
 # segunda forma
@@ -24,7 +24,7 @@ def fatoracao_2(num):
 
 
 fatoracao2 = fatoracao_2(num)
-print('F2', fatoracao2)
+print("F2", fatoracao2)
 
 
 # terceira forma
@@ -37,7 +37,7 @@ def fatoracao_3(num):
 
 
 fatoracao3 = fatoracao_3(num)
-print('F3', fatoracao3)
+print("F3", fatoracao3)
 
 
 # recursivo
@@ -49,6 +49,6 @@ def fatorial_4(n):
 
 
 fatoracao4 = fatorial_4(num)
-print('F4', fatoracao4)
+print("F4", fatoracao4)
 
 # fatorial

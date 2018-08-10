@@ -1,27 +1,35 @@
 from urllib.request import Request, urlopen
 
 
-def calcula_frete (cep_origem='01304001', cep_destino='04110021', peso='1', tipo_frete='04014',
-                   altura = '10', largura = '20', comprimento = '20'):
-    url = 'http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?'
-    url += '&nCdEmpresa='
-    url += '&sDsSenha='
-    url += '&nCdServico=' + tipo_frete
-    url += '&sCepOrigem=' + cep_origem
-    url += '&sCepDestino=' + cep_destino
-    url += '&nVlPeso=' + peso
-    url += '&nCdFormato=1'
-    url += '&nVlComprimento=' + comprimento
-    url += '&nVlAltura=' + altura
-    url += '&nVlLargura=' + largura
-    url += '&nVlDiametro=0'
-    url += '&sCdMaoPropria=n'
-    url += '&nVlValorDeclarado=0'
-    url += '&sCdAvisoRecebimento=n'
-    url += '&StrRetorno=xml'
-    url += '&nIndicaCalculo=3'
+def calcula_frete(
+    cep_origem="01304001",
+    cep_destino="04110021",
+    peso="1",
+    tipo_frete="04014",
+    altura="10",
+    largura="20",
+    comprimento="20",
+):
+    url = "http://ws.correios.com.br/calculador/CalcPrecoPrazo.aspx?"
+    url += "&nCdEmpresa="
+    url += "&sDsSenha="
+    url += "&nCdServico=" + tipo_frete
+    url += "&sCepOrigem=" + cep_origem
+    url += "&sCepDestino=" + cep_destino
+    url += "&nVlPeso=" + peso
+    url += "&nCdFormato=1"
+    url += "&nVlComprimento=" + comprimento
+    url += "&nVlAltura=" + altura
+    url += "&nVlLargura=" + largura
+    url += "&nVlDiametro=0"
+    url += "&sCdMaoPropria=n"
+    url += "&nVlValorDeclarado=0"
+    url += "&sCdAvisoRecebimento=n"
+    url += "&StrRetorno=xml"
+    url += "&nIndicaCalculo=3"
 
     return url
+
 
 url = calcula_frete()
 
@@ -29,21 +37,21 @@ url = calcula_frete()
 request = Request(url)
 result = urlopen(request).read()
 
-result = result.decode('ISO-8859-1')
-find_valor = ('<Valor>')
-find_end_valor = ('</Valor>')
+result = result.decode("ISO-8859-1")
+find_valor = "<Valor>"
+find_end_valor = "</Valor>"
 pos_valor = result.index(find_valor)
 pos_end_valor = result.index(find_end_valor)
 
-find_prazo = ('<PrazoEntrega>')
-find_end_prazo = ('</PrazoEntrega>')
+find_prazo = "<PrazoEntrega>"
+find_end_prazo = "</PrazoEntrega>"
 pos_prazo = result.index(find_prazo)
 pos_end_prazo = result.index(find_end_prazo)
 
-valor = result[pos_valor + len(find_valor): pos_end_valor]
-prazo = result[pos_prazo + len(find_prazo): pos_end_prazo]
+valor = result[pos_valor + len(find_valor) : pos_end_valor]
+prazo = result[pos_prazo + len(find_prazo) : pos_end_prazo]
 
-valor_math = valor.replace(',','.')
+valor_math = valor.replace(",", ".")
 
-print('R$ ' + valor)
-print(prazo + ' dias úteis')
+print("R$ " + valor)
+print(prazo + " dias úteis")
