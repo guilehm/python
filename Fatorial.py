@@ -1,11 +1,11 @@
 # primeira forma
 def fatoracao(num):
-    if num == 0 or num ==1:
+    if num == 0 or num == 1:
         return 1
     else:
         result = num
         while num > 1:
-            result = result * (num-1)
+            result = result * (num - 1)
             num -= 1
         return result
 
