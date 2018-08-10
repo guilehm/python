@@ -13,7 +13,6 @@ class Jogo:
         self.chute()
         self.comparar()
 
-
     def gerar_numero(self):
         return str(randint(0000, 9999))
 
@@ -37,14 +36,16 @@ class Jogo:
                                 self.cows += 1
 
                     if self.bulls == 4:
-                        print('Você ganhou com {} tentativa(s).!\n o número correo é {}.'.format(self.tentativas, self.numero))
+                        print('Você ganhou com {} tentativa(s).!\n o número correo é {}.'.format(
+                            self.tentativas, self.numero
+                        ))
                         self.jogar = False
                     else:
                         self.tentativas += 1
                         print('Cows: {}\nBulls: {}\n'.format(self.cows, self.bulls))
                         self.chute()
                         self.comparar()
-                except:
+                except IndexError:
                     print('Digite apenas números com 4 dígitos.')
                     self.chute()
                     self.comparar()
@@ -52,5 +53,6 @@ class Jogo:
                 print('Digite apenas números com 4 dígitos.')
                 self.chute()
                 self.comparar()
+
 
 gui = Jogo()
