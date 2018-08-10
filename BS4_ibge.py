@@ -18,7 +18,7 @@ r = requests.get('https://www2.cetip.com.br/ConsultarTaxaDi/ConsultarTaxaDICetip
 soup = BeautifulSoup(r.content, 'html.parser')
 print(soup.prettify())
 
-response = str(soup)
-response = json.loads(response)
+response = json.loads(str(soup))
 aliquota = response.get('taxa')
+
 print(aliquota)
