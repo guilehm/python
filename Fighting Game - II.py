@@ -1,7 +1,7 @@
-from random import randint, uniform
+from random import uniform
 
 
-class Personagem():
+class Personagem:
     def __init__(self, nome, vida, p_ataque, p_defesa):  # definir características dos personagens
         self.nome = nome
         self.vida = vida
@@ -24,7 +24,7 @@ class Personagem():
         while self.vivo is True and object.vivo is True and cont <= x:  # loop para ninguém atacar mortos
             if self.vivo is True and object.vivo is True:  # se está vivo, ataca
                 self.dano = (self.p_ataque / 4) * uniform(0.8, 1.2)
-                defesa = (object.p_defesa) * 0.1
+                defesa = object.p_defesa * 0.1
                 self.dano = self.dano - defesa
                 object.vida = (object.vida) - self.dano
                 if object.vida <= 0:  # se morreu
@@ -35,9 +35,9 @@ class Personagem():
                     print(f'{self.nome} ataca {object.nome} e inflige: {self.dano:.2f}.')
             if object.vivo is True and self.vivo is True:
                 object.dano = (object.p_ataque / 4) * uniform(0.8, 1.2)
-                defesa = (self.p_defesa) * 0.1
+                defesa = self.p_defesa * 0.1
                 object.dano = object.dano - defesa
-                self.vida = (self.vida) - object.dano
+                self.vida = self.vida - object.dano
                 if self.vida <= 0:
                     self.vida = 0
                     self.vivo = False
@@ -84,7 +84,7 @@ if info == 'info':
 
 valid_qtd = False
 valid_nome = False
-while valid_qtd == False:  # validar quantidade de turnos
+while not valid_qtd:  # validar quantidade de turnos
     atc1 = input('Digite a quantidade de turnos:\n')
     if atc1 == 'info':
         print('\nPERSONAGENS:\n\tEsqueleto, Orc, Troll, Enderman, Zumbi\n')
@@ -95,7 +95,7 @@ while valid_qtd == False:  # validar quantidade de turnos
         print('\nDigite apenas números inteiros.')
 
 # validar nome atacante 1
-while valid_nome == False:
+while not valid_nome:
     atc1 = input('Digite o nome do atacante:\n').lower()
     if atc1 == 'info':
         print('\nPERSONAGENS:\n\tEsqueleto, Orc, Troll, Enderman, Zumbi\n')
@@ -105,7 +105,7 @@ while valid_nome == False:
         print('\nEscolha um personagem válido. Para mais informações digite "info".')
 valid_nome = False  # validar nome atacante 2
 
-while valid_nome == False:
+while not valid_nome:
     atc2 = input('Digite o nome do defensor:\n').lower()
     if atc2 == 'info':
         print('\nPERSONAGENS:\n\tEsqueleto, Orc, Troll, Enderman, Zumbi\n')
