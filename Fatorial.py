@@ -9,6 +9,7 @@ def fatoracao(num):
             num -= 1
         return result
 
+
 num = int(input('Insira um número: '))
 print('F1', fatoracao(num))
 
@@ -18,11 +19,13 @@ def fatoracao_2(num):
     fat = 1
     for i in range(2, (num + 1)):
         fat *= num
-        num -=1
+        num -= 1
     return fat
+
 
 fatoracao2 = fatoracao_2(num)
 print('F2', fatoracao2)
+
 
 # terceira forma
 def fatoracao_3(num):
@@ -32,8 +35,10 @@ def fatoracao_3(num):
         num -= 1
     return f
 
+
 fatoracao3 = fatoracao_3(num)
 print('F3', fatoracao3)
+
 
 # recursivo
 def fatorial_4(n):
@@ -41,6 +46,7 @@ def fatorial_4(n):
         return 1
     else:
         return n * fatorial_4(n - 1)
+
 
 fatoracao4 = fatorial_4(num)
 print('F4', fatoracao4)
