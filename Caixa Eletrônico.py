@@ -15,7 +15,11 @@ if num > 0:
     num = num % 1
 
 
-if notas_50: print('Notas 50: {}'.format(notas_50))
-if notas_20: print('Notas 20: {}'.format(notas_20))
-if notas_10: print('Notas 10: {}'.format(notas_10))
-if notas_1: print('Notas 1: {}'.format(notas_1))
+if notas_50:
+    print('Notas 50: {}'.format(notas_50))
+if notas_20:
+    print('Notas 20: {}'.format(notas_20))
+if notas_10:
+    print('Notas 10: {}'.format(notas_10))
+if notas_1:
+    print('Notas 1: {}'.format(notas_1))
