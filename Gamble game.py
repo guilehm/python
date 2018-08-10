@@ -10,9 +10,9 @@ while len(lista_sort) < 6:
     if x not in lista_sort:
         lista_sort.append(x)
 
-while len(lista_esco) <6:
+while len(lista_esco) < 6:
     x = input('Escolha um número:\n')
-    try: 
+    try:
         x = int(x)
         if x <1 or x > 60:
             print('\nEscolha números entre 1 e 60.')
@@ -20,7 +20,7 @@ while len(lista_esco) <6:
             print('\nOs números não podem ser repetidos.')
         else:
             lista_esco.append(x)
-    except: print('\nEscolha apenas números inteiros.')
+    except ValueError: print('\nEscolha apenas números inteiros.')
     
 lista_sort = sorted(lista_sort)
 lista_esco = sorted(lista_esco)
