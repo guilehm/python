@@ -9,5 +9,8 @@ print(df)
 print(df[['W', 'Z']])
 
 df['new'] = df['W'] + df['X']
-
 print(df)
+
+print(df.loc['A', 'X'])
+
+print(df.loc['A'])
