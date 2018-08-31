@@ -25,6 +25,7 @@ six = "==1.11.0"
 "urllib3" = "==1.23"
 Cycler = "==0.10.0"
 scrapy = "*"
+pandas = "*"
 
 [dev-packages]
 
