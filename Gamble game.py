@@ -1,6 +1,5 @@
 from random import randint
 
-
 print("Bem-vindo à Mega Sena.")
 input("Tecle enter para começar.")
 print()
