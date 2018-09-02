@@ -1,9 +1,8 @@
 import csv
+from collections import defaultdict
 
 import requests
 from bs4 import BeautifulSoup
-from collections import defaultdict
-
 
 r = requests.get("https://www.guiadecompra.com/categorias/")
 soup = BeautifulSoup(r.content, "html.parser")
