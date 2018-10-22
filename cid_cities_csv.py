@@ -1,5 +1,7 @@
 import csv
+import json
 from collections import defaultdict
+
 filename = 'files/cid_cities.csv'
 
 cities_list = defaultdict(list)
@@ -19,3 +21,12 @@ with open('files/cid.csv', 'w') as f:
     writer.writeheader()
     for cid, city in cities_list.items():
         writer.writerow({'cid': cid, 'city': city})
+
+
+with open('files/cid.csv', 'r') as f:
+    reader = csv.reader(f)
+    next(reader)
+    my_dict = {rows[0]: rows[1] for rows in reader}
+
+    with open('files/cid.json', 'w') as outfile:
+        json.dump(my_dict, outfile)
