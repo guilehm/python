@@ -1,8 +1,8 @@
 import os
 
 import requests
-from lxml import etree
 from bs4 import BeautifulSoup
+from lxml import etree
 
 headers = {'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'}
 
