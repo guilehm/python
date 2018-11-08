@@ -102,6 +102,9 @@ ENV/
 *.xml
 *.iml
 
+# my files
 files/\.~lock\.sitka_weather_07-2014\.csv#
 
 *.csv#
+
+dr-pepper/*
