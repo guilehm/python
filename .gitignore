@@ -108,3 +108,5 @@ files/\.~lock\.sitka_weather_07-2014\.csv#
 *.csv#
 
 dr-pepper/*
+
+headers_and_referers\.py
