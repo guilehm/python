@@ -1,9 +1,10 @@
 import os
+
 import requests
 from bs4 import BeautifulSoup
 
 
-def get_images(page):
+def get_images_url(page):
     url = f'https://blog.drpepper.com.br/page/{page}'
     r = requests.get(url)
     if r.status_code == 200:
@@ -14,7 +15,7 @@ def get_images(page):
         print(f'Found {len(urls)} images at page {page}.')
         return urls
     else:
-        print('Could not request URL {url}')
+        print(f'Error [{r.status_code}]')
 
 
 def download_images(urls):
@@ -34,5 +35,5 @@ def download_images(urls):
 
 def process(start, stop):
     for page in range(start, stop + 1):
-        urls = get_images(page)
+        urls = get_images_url(page)
         download_images(urls)
