@@ -6,6 +6,7 @@ from concurrent import futures
 import requests
 from bs4 import BeautifulSoup
 
+from get_proxy_list import get_proxies
 from headers_and_referers import headers_referers, headers_useragents
 
 # USE THIS CODE FOR YOUR OWN RISK
@@ -16,16 +17,24 @@ MAX_WORKERS = 35
 BASE_PAGE_URL = 'https://blog.drpepper.com.br/page/{}'
 BASE_IMG_URL = 'https://www.drpepper.com.br/tirinhas/'
 OUTPUT_DIR = 'dr-pepper/'
+PROXY_LIST = get_proxies()
 
 
-def get_header(user_agent, referer):
+def get_headers(user_agent, referer):
     headers = {'user-agent': user_agent, 'referer': referer}
     return headers
 
 
+def get_proxies(proxy_list):
+    proxies = {'http': random.choice(proxy_list), 'https': random.choice(proxy_list)}
+    return proxies
+
+
 def get_images_urls(url):
     r = requests.get(
-        url, headers=get_header(random.choice(headers_useragents), referer=random.choice(headers_referers))
+        url,
+        headers=get_headers(random.choice(headers_useragents), referer=random.choice(headers_referers)),
+        proxies=get_proxies(PROXY_LIST)
     )
     if r.status_code == 200:
         soup = BeautifulSoup(r.text, 'html.parser')
@@ -57,7 +66,9 @@ def download_image(url):
         print(f'\tImage {filename} already exists')
         return
     r = requests.get(
-        url, headers=get_header(random.choice(headers_useragents), referer=random.choice(headers_referers))
+        url,
+        headers=get_headers(random.choice(headers_useragents), referer=random.choice(headers_referers)),
+        proxies=get_proxies(PROXY_LIST)
     )
     if r.status_code == 200:
         with open(f'dr-pepper/{filename}', 'wb') as f:
