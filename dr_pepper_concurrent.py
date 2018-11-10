@@ -11,7 +11,11 @@ from headers_and_referers import headers_referers, headers_useragents
 # USE THIS CODE FOR YOUR OWN RISK
 # YOU MAY LAUNCH A DENIAL-OF-SERVICE (DoS) ATTACK
 
-image_count = 0
+IMAGE_COUNT = 0
+MAX_WORKERS = 35
+BASE_PAGE_URL = 'https://blog.drpepper.com.br/page/{}'
+BASE_IMG_URL = 'https://www.drpepper.com.br/tirinhas/'
+OUTPUT_DIR = 'dr-pepper/'
 
 
 def get_header(user_agent, referer):
@@ -26,8 +30,7 @@ def get_images_urls(url):
     if r.status_code == 200:
         soup = BeautifulSoup(r.text, 'html.parser')
         images = soup.find_all('img')
-        base = 'https://www.drpepper.com.br/tirinhas/'
-        urls = [img.attrs['src'] for img in images if img.attrs.get('src', '').startswith(base)]
+        urls = [img.attrs['src'] for img in images if img.attrs.get('src', '').startswith(BASE_IMG_URL)]
         print(f'Found {len(urls)} images.')
         return urls
     elif r.status_code == 403:
@@ -38,13 +41,8 @@ def get_images_urls(url):
         return
 
 
-MAX_WORKERS = 35
-BASE_URL = 'https://blog.drpepper.com.br/page/{}'
-BASE_NAME = 'dr-pepper/'
-
-
 def get_all_images_urls(start, stop):
-    pages_urls = [BASE_URL.format(number) for number in range(start, stop + 1)]
+    pages_urls = [BASE_PAGE_URL.format(number) for number in range(start, stop + 1)]
     workers = min(MAX_WORKERS, stop - start + 1)
     with futures.ThreadPoolExecutor(workers) as executor:
         res = [url for url_list in list(executor.map(get_images_urls, pages_urls)) if isinstance(url_list, list) for url in url_list]
@@ -53,7 +51,7 @@ def get_all_images_urls(start, stop):
 
 def download_image(url):
     filename = os.path.basename(url)
-    if os.path.exists(BASE_NAME + filename):
+    if os.path.exists(OUTPUT_DIR + filename):
         print('\tImage already exists')
         return
     r = requests.get(
@@ -62,8 +60,8 @@ def download_image(url):
     if r.status_code == 200:
         with open(f'dr-pepper/{filename}', 'wb') as f:
             f.write(r.content)
-        global image_count
-        image_count += 1
+        global IMAGE_COUNT
+        IMAGE_COUNT += 1
         print(f'\tImage {filename} saved.')
     elif r.status_code == 403:
         return download_image(url)
@@ -80,7 +78,7 @@ def download_all_images(urls):
 
 if __name__ == '__main__':
     t0 = time.time()
-    urls = get_all_images_urls(1, 479)
+    urls = get_all_images_urls(1, 1)
     images = download_all_images(urls)
     elapsed = time.time() - t0
-    print(f'{image_count} images were saved in {elapsed:.2f} seconds with {MAX_WORKERS} workers.')
+    print(f'{IMAGE_COUNT} images were saved in {elapsed:.2f} seconds with {MAX_WORKERS} workers.')
