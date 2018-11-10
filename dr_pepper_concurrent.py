@@ -45,14 +45,16 @@ def get_all_images_urls(start, stop):
     pages_urls = [BASE_PAGE_URL.format(number) for number in range(start, stop + 1)]
     workers = min(MAX_WORKERS, stop - start + 1)
     with futures.ThreadPoolExecutor(workers) as executor:
-        res = [url for url_list in list(executor.map(get_images_urls, pages_urls)) if isinstance(url_list, list) for url in url_list]
+        res = [url for url_list in list(
+            executor.map(get_images_urls, pages_urls)
+        ) if isinstance(url_list, list) for url in url_list]
     return res
 
 
 def download_image(url):
     filename = os.path.basename(url)
     if os.path.exists(OUTPUT_DIR + filename):
-        print('\tImage already exists')
+        print(f'\tImage {filename} already exists')
         return
     r = requests.get(
         url, headers=get_header(random.choice(headers_useragents), referer=random.choice(headers_referers))
@@ -77,8 +79,10 @@ def download_all_images(urls):
 
 
 if __name__ == '__main__':
+    first_page = int(input('Type the number of the first page: '))
+    last_page = int(input('Type the number of the last page: '))
     t0 = time.time()
-    urls = get_all_images_urls(1, 1)
+    urls = get_all_images_urls(first_page, last_page)
     images = download_all_images(urls)
     elapsed = time.time() - t0
     print(f'{IMAGE_COUNT} images were saved in {elapsed:.2f} seconds with {MAX_WORKERS} workers.')
