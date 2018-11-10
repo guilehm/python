@@ -11,7 +11,7 @@ def get_proxies():
         if i.xpath('.//td[5][contains(text(),"elite proxy")]') and i.xpath('.//td[7][contains(text(),"yes")]'):
             proxy = ':'.join([i.xpath('.//td[1]/text()')[0], i.xpath('.//td[2]/text()')[0]])
             proxies.add(proxy)
-    return proxies
+    return list(proxies)
 
 
 if __name__ == '__main__':
