@@ -27,6 +27,7 @@ Cycler = "*"
 scrapy = "*"
 pandas = "*"
 ipdb = "*"
+pytest = "*"
 
 [dev-packages]
 
