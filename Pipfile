@@ -27,6 +27,8 @@ Cycler = "*"
 scrapy = "*"
 pandas = "*"
 ipdb = "*"
+seaborn = "*"
+sklearn = "*"
 pytest = "*"
 
 [dev-packages]
